@@ -1,0 +1,19 @@
+Serial_Number,Name,Email,Designation,Team,Active,W1,W2,W3,W4
+1,ABC,ABC@ebrd.com,Principal ,Team A,1,,,,7
+2,QWE,QWE@ebrd.com,Associate Manager ,Team A,1,3,16,,
+3,ERTY,ERTY@ebrd.com,Principal ,Team B,1,2,,14,16
+4,TYU,TYU@ebrd.com,Consultant,Team B,1,,,,
+5,YUI,YUI@ebrd.com,Principal ,Team C,1,17,14,,
+6,IOP,IOP@ebrd.com,Consultant,Team D,1,,,,
+7,ASD,ASD@ebrd.com,Associate ,Team E,1,9,,,1
+8,DFG,DFG@ebrd.com,Principal ,Team F,1,,,,
+9,FGH,FGH@ebrd.com,Analyst,Team G,1,7,,16,
+10,GHJ,GHJ@ebrd.com,Analyst,Team H,1,,,,
+11,HJK,HJK@ebrd.com,CCT Position,Team L,1,,,,
+12,JKL,JKL@ebrd.com,Associate Director,Team G,1,,13,,
+13,ZXC,ZXC@ebrd.com,Principal,Team B,1,,12,,
+14,CVB,CVB@ebrd.com,Intern,Team A,1,,5,3,
+15,VBN,VBN@ebrd.com,Associate,Team L,1,,2,,
+16,BNM,BNM@ebrd.com,Associate Director,Team L,1,,,9,3
+17,ASD,ASD@ebrd.com,Associate Director,Team X,1,5,,,
+18,DSF,DSF@ebrd.com,Associate Manager,Team A,1,,,,
