@@ -30,11 +30,8 @@ for(i in 1:length(option_list)){
   for(j in i:length(option_list)){
     option_list[[j]]<-setdiff(option_list[[j]],c(match_for_i,as.numeric(names(option_list)[i])))
   }
-  readline()
   option_list[[i]] <- match_for_i
-  readline()
   option_list[[as.character(match_for_i)]] <- as.numeric(names(option_list)[i])
-  readline()
   }
 }
 
