@@ -49,7 +49,12 @@ do_matching <- function(record,for_matching){
     return(df)
 }
 
-
+update_record <- function(record,df){
+    name <- paste0('W',ncol(record)-5)
+    record[,name]<-NA
+    record[,ncol(record)] <- df$match[match(record$Serial_Number,df$Sr_No)]
+    return(record)
+}
 ui <- fluidPage(
     titlePanel("Blind Coffee Matcher"),
     sidebarLayout(
@@ -64,6 +69,7 @@ ui <- fluidPage(
                                            "text/comma-separated-values,text/plain",
                                            ".csv")),
                       actionButton("runmatch", "Run Matcher"),
+                      downloadButton("downloadData","Downloaded Updated Record")
                       
         )
         ,
@@ -96,7 +102,17 @@ server <- function(input, output, session) {
             To_be_matched <- read.csv(input$to_be_matched$datapath,stringsAsFactors = FALSE)
             
             #data_print <- datasetInput(record = Coffee_Record,df = output$contents)
-            return(do_matching(record = Coffee_Record,for_matching = To_be_matched))
+            out <- do_matching(record = Coffee_Record,for_matching = To_be_matched)
+            new_record <- update_record(record = Coffee_Record,df = out)
+            output$downloadData <- downloadHandler(
+                filename = function() {
+                    paste("Updated_CoffeeRecord_", Sys.Date(), ".csv", sep="")
+                },
+                content = function(file) {
+                    write.csv(new_record, file,row.names = FALSE,na = "")
+                }
+            )
+            return(out)
         })
         
     })
